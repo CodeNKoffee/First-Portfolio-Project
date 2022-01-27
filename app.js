@@ -4,8 +4,14 @@ const form = document.getElementById('contact__form');
 const firstName = document.getElementById('first__name');
 const lastName = document.getElementById('last__name');
 const email = document.getElementById('email');
-const submitButton = document.getElementById('form__btn');
+const nextButton = document.getElementById('next__btn');
+const submitButton = document.getElementById('submit__btn');
 const error = document.getElementById('error__msg');
+const formTray = document.getElementById('form__tray');
+const firstForm = document.getElementById('first__form');
+const secondForm = document.getElementById('second__form');
+const formSuccess = document.getElementById('form__success');
+const functionalityBar = document.getElementById('functionality__bar');
 
 //FUNCTIONS
 
@@ -34,25 +40,24 @@ const lazyLoad = target => {
 targets.forEach(lazyLoad);
 
 
-//Form Validation
-// submitButton.addEventListener('submit', (e) => {
-//   let messages = []
-//   if(firstName.value === '' || firstName.value == null) {
-//     errorMessage.push('Name is required! Please enter a name.')
-//     const errorMessage = document.createElement('h5');
-//     errorMessage.innerText = `Name is required! Please enter a name.`;
-//     errorMessage.classList.add('error');
-//     error.appendChild(errorMessage);
-//   }
-
-//   if(lastName.value === '' || lastName.value == null) {
-//     messages.push('Name is required! Please enter a name.')
-//   }
-// })
 
 
-//Booking & Planning
-submitButton.addEventListener('submit', (e) => {
-  
-})
+//Transitioning to Next Form
+secondForm.style.display = "none";
+formSuccess.style.display = "none";
+submitButton.style.display = "none";
+
+
+nextButton.addEventListener("click", () => {
+  firstForm.style.display = "none";
+  nextButton.style.display = "none";
+  secondForm.style.display = "block";
+  submitButton.style.display = "block";
+});
+
+submitButton.addEventListener("click", () => {
+  secondForm.style.display = "none";
+  functionalityBar.style.display = "none";
+  formSuccess.style.display = "block";
+});
 

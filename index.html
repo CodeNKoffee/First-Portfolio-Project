@@ -251,7 +251,7 @@
           Our expert in-house travel service embodies the <br><span class="maroon">MyEgypt</span> experience every step of the way.
         </h3>
         <div id="form__tray">
-          <div class="functionality__bar">
+          <div id="functionality__bar">
             <ul class="form__icons">
               <li class="form__icon">
                 <i class="fas fa-user-lock"></i>
@@ -266,11 +266,12 @@
                 <span class="form__icon--name">24/7<br>Customer Support</span>
               </li>
             </ul>
-            <button class="form__btn">Next</button>
+            <button id="next__btn">Next</button>
+            <button id="submit__btn">Submit</button>
           </div>
-          <div class="form">
+          <div id="first__form">
             <h3 class="form__title">Please fill in the following</h3>
-            <form id="contact__form" onsubmit="contact(event)">
+            <form id="contact__form">
               <div class="form__item">
                 <label class="form__item--label">First Name</label>
                 <input class="input" name="user_name" type="text" required></input>
@@ -283,7 +284,59 @@
                 <label class="form__item--label">Email</label>
                 <input class="input" name="user_email" type="email" required></input>
               </div>
-            </form>  
+            </form> 
+          </div>
+          <div id="second__form">
+            <h3 class="form__title">Please fill in the following</h3>
+            <form action="" id="booking">
+              <div class="form__item form__item--select">
+                <label class="form__item--label">Choose a Governorate</label>
+                <select id="governorates">
+                  <option value="governorate">Select Governorate</option>
+                  <option value="governorate">Alexandria</option>
+                  <option value="governorate">Aswan</option>
+                  <option value="governorate">Asyut</option>
+                  <option value="governorate">Beheira</option>
+                  <option value="governorate">Beni Suef</option>
+                  <option value="governorate">Cairo</option>
+                  <option value="governorate">Dakahlia</option>
+                  <option value="governorate">Damietta</option>
+                  <option value="governorate">Fayoum</option>
+                  <option value="governorate">Gharbia</option>
+                  <option value="governorate">Giza</option>
+                  <option value="governorate">Ismailia</option>
+                  <option value="governorate">Kafr El Sheikh</option>
+                  <option value="governorate">Luxour</option>
+                  <option value="governorate">Marsa Matrouh</option>
+                  <option value="governorate">Minya</option>
+                  <option value="governorate">Monufia</option>
+                  <option value="governorate">New Valley</option>
+                  <option value="governorate">Port Said</option>
+                  <option value="governorate">Qalyubia</option>
+                  <option value="governorate">Qena</option>
+                  <option value="governorate">Red Sea</option>
+                  <option value="governorate">Sharqia</option>
+                  <option value="governorate">Sohag</option>
+                  <option value="governorate">South Sinai</option>
+                  <option value="governorate">Suez</option>
+                </select>
+              </div>
+              <div class="form__item">
+                <label class="form__item--label" id="arrival">Arrival Date</label>
+                <input type="date" id="date">
+              </div>
+              <div class="form__item">
+                <label class="form__item--label" id="departure">Departure Date</label>
+                <input type="date" id="date">
+              </div>
+            </form>
+          </div>
+          <div id="form__success">
+            <h3 class="form__title">Thank you for<br>choosing us</h3>
+            <div class="check">
+              <i class="far fa-check-circle"></i>
+            </div>
+            <h5 class="confirm__msg">A planner will connect<br>with you soon</h5>
           </div>
         </div> 
       </div>

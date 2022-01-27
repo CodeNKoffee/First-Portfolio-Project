@@ -436,7 +436,7 @@ GUIDE SECTIONS' GENERICS
   flex-direction: row-reverse;
 }
 
-.functionality__bar {
+#functionality__bar {
   width: 20%;
   margin-left: 1.6em;
   padding: 3.2em 0;
@@ -488,7 +488,7 @@ GUIDE SECTIONS' GENERICS
   transition: all 300ms ease;
 }
 
-.form__btn {
+#next__btn, #submit__btn {
   background-color: #cf9459;
   color: #fff;
   border: 2px solid #cf9459;
@@ -500,22 +500,33 @@ GUIDE SECTIONS' GENERICS
   transition: all 300ms ease;
 }
 
-.form__btn:hover {
+#next__btn:hover, #submit__btn:hover {
   background-color: #fff;
   color: #cf9459;
 }
 
-.form__btn:active {
+#next__btn:active, #submit__btn:active {
   background-color: #cf9459;
   color: #fff;
   transform: scale(0.8);
 }
 
-.form {
+#first__form, #second__form, #form__success {
   background-color: #cf9459;
   border-radius: 8px;
   width: 70%;
   padding: 2.4em;
+  display: flex;
+  flex-direction: column;
+}
+
+#second__form {  
+  display: flex;
+  flex-direction: column;
+}
+
+#booking {
+  margin-top: 4.8em;
 }
 
 .form__title {
@@ -534,12 +545,17 @@ GUIDE SECTIONS' GENERICS
   margin-bottom: 3.2em;
 }
 
+.form__item--select {
+  display: flex;
+  flex-direction: column;
+}
+
 .form__item--label {
   font-size: 2.4rem;
   color: #fff;
 }
 
-input {
+input, select {
   font-size: 2.4rem;
   font-weight: 500;
   font-family: 'Cairo' sans-serif;
@@ -552,6 +568,33 @@ input {
   border: none;
   height: 40px;
   transition: all 300ms ease;
+}
+
+select {
+  padding: 0.1em;
+}
+
+#form__success {
+  margin: 0 auto;
+}
+
+#form__success h3 {
+  font-weight: 900;
+}
+
+.check {
+  color: #fff;
+  font-size: 16rem;
+  margin: 0.2em 0.8em;
+  display: flex;
+  justify-content: center;
+}
+
+.confirm__msg {
+  color: #fff;
+  font-size: 2.4rem;
+  margin-bottom: 0.2em;
+  text-align: center;
 }
 
 
