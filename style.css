@@ -428,6 +428,8 @@ GUIDE SECTIONS' GENERICS
 
 #form__tray {
   background-color: #fff;
+  min-width: 657px;
+  min-height: 657px;
   opacity: 0.7;
   border-radius: 8px;
   margin: 10.4em 0;
@@ -520,9 +522,8 @@ GUIDE SECTIONS' GENERICS
   flex-direction: column;
 }
 
-#second__form {  
-  display: flex;
-  flex-direction: column;
+#form__success {
+  padding-top: 12em;
 }
 
 #booking {
