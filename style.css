@@ -7,7 +7,6 @@ BROWSER SCROLLBAR KITS
 */
 
 /* CHROME & SAFARI */
-
 html::-webkit-scrollbar {
   width: 8px; 
 }
@@ -173,6 +172,8 @@ button {
 .no-cursor {
   cursor: not-allowed;
 }
+
+
 
 
 /*
@@ -482,7 +483,6 @@ GUIDE SECTIONS' GENERICS
 #neo-cities {
   margin-bottom: 3.2em;
 }
-
 
 
 /* CLOUDS */
@@ -811,6 +811,8 @@ footer {
 }
 
 
+
+
 /*
 
 RESPONSIVENESS
@@ -827,6 +829,7 @@ RESPONSIVENESS
     font-weight: 700;
   }
 }
+
 
 @media(max-width: 900px) {
   .nav__bar {
@@ -935,7 +938,7 @@ RESPONSIVENESS
     align-content: stretch;
   }
 
-    /* RIGHTIES */
+  /* RIGHTIES */
   #header,
   #nile-river,
   #aqua,
