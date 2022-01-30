@@ -1,4 +1,4 @@
-//VARIABLES
+//DECLARATIONS
 const targets = document.querySelectorAll('img');
 const form = document.getElementById('contact__form');
 const firstName = document.getElementById('first__name');
@@ -14,7 +14,14 @@ const formSuccess = document.getElementById('form__success');
 const functionalityBar = document.getElementById('functionality__bar');
 
 //FUNCTIONS
+//Navigation Bar & Hamburger
+function openMenu(){
+  document.body.classList += " menu--open"
+}
 
+function closeMenu(){
+  document.body.classList.remove('menu--open')
+}
 //Fade-In Animation
 const lazyLoad = target => {
   const io = new IntersectionObserver((entries, observer) => {

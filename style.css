@@ -201,6 +201,7 @@ Hero Section
 .logo {
   width: 100%;
   max-width: 260px;
+  min-width: 120px;
 }
 
 .nav__link--list {
@@ -237,6 +238,90 @@ Hero Section
   border: 2px solid #fff;
   background-color: transparent;
   color: #fff;
+}
+
+.nav__container--mobile {
+  display: none;
+}
+
+.btn__menu {
+  background-color: transparent;
+  font-size: 40px;
+  border: none;
+  color: #cf9459;
+  display: none;
+  transition: all 300ms ease;
+}
+
+.btn__menu:hover{
+  transform: scale(1.1);
+  color: #fff;
+}
+
+.menu__backdrop {
+  position: absolute;
+  background-color: #cf9459;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  transition: all 300ms ease;
+  opacity: 0;
+  transform: translate(100%);
+}
+
+.menu--open {
+  max-height: 100vh;
+  overflow: hidden;
+  transition: all 300ms ease;
+}
+
+.menu--open .menu__backdrop {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0);
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu__list {
+  padding: 32px 0;
+}
+
+.menu__link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 40px;
+  transition: all 300ms ease;
+}
+
+.menu__link:hover {
+  color: #242424;
+}
+
+.btn__menu--close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  padding: 8px;
+  color: white;
+  transition: all 300ms ease;
+}
+
+.btn__menu--close:hover {
+  transform: scale(1.2);
+  color: #242424;
 }
 
 
@@ -424,6 +509,7 @@ GUIDE SECTIONS' GENERICS
   font-size: 4rem;
   font-family: 'Cairo', sans-serif;
   color: #fff;
+  text-align: center;
 }
 
 #form__tray {
@@ -665,19 +751,28 @@ footer {
 }
 
 .footer__links {
+  width: 100%;
   margin: 16px 0;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  
 }
 
 .footer__link {
+  width: calc(80% / 3);
+  text-align: center;
+  margin: 0 0.2em;
+}
+
+.footer__link--anchor {
   color: #fff;
   font-size: 12px;
-  margin: 0 8px;
+  text-align: center;
   transition: all 250ms ease;
 }
 
-.footer__link:hover {
+.footer__link--anchor:hover {
   color: #cf9459;
 }
 
@@ -715,3 +810,239 @@ footer {
   justify-content: center;
 }
 
+
+/*
+
+RESPONSIVENESS
+
+*/
+/* 3 : 2 Laptops & Small-Sized Computers */
+@media(max-width: 1100px) {
+  .header__title {
+    font-size: 4.8rem;
+  }
+
+  .header__para {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+}
+
+@media(max-width: 900px) {
+  .nav__bar {
+    padding: 1em 4em;
+  }
+
+  .hero__title {
+    font-size: 12rem;
+    margin: 1em 0;
+  }
+
+  .hero__subtitle {
+    font-size: 2.4rem;
+  }
+
+  .header__title {
+    font-size: 4rem;
+  }
+  
+  .header__para {
+    font-size: 1.3rem;
+  }
+
+  .application__title {
+    font-size: 5.6rem;
+    margin-top: 32em;
+  }
+
+  .application__subtitle {
+    font-size: 2.4rem;
+  }
+
+  .address {
+    font-size: 1.2rem;
+  }
+  
+  .logo__wrapper--footer {
+    padding: 1.6em;
+  }
+}
+
+
+/* Large Tablets */
+@media(max-width: 768px) {
+  .btn__menu {
+    display: block;
+  }
+  
+  .nav__container--mobile {
+    display: block;
+  }
+
+  .nav__link--list {
+    display: none;
+  }
+
+  .side__info {
+    padding: 0 1.6em;
+  }
+
+  .fab {
+    font-size: 2.4rem;
+  }
+
+  .footer__content {
+    margin: 2.4em 0;
+  }
+
+  .footer__claim {
+    margin-top: 3.2em;
+  }
+}
+
+
+/* Small Tablets & Large Smart Phones */
+@media(max-width: 550px) {
+  .form__icon, .form__icons, .address__wrapper {
+    display: none;
+  }
+
+  .row {
+    width: 90%;
+    text-align: center;
+  }
+
+  .hero__title {
+    font-size: 10.4rem;
+  }
+
+  .hero__subtitle {
+    font-size: 2rem;
+    padding: 0 2.4em;
+  }
+
+  .header__txt {
+    margin: 4em;
+  }
+
+  .header__title {
+    font-size: 4.8rem;
+    line-height: 1.2;
+    margin-bottom: 0.8em;
+  }
+
+  .header__para {
+    align-content: stretch;
+  }
+
+    /* RIGHTIES */
+  #header,
+  #nile-river,
+  #aqua,
+  #wtr-sprts,
+  #architect,
+  #people {
+    width: 100%;
+    margin: 25.6em 0;
+    border-top: 4px solid #cf9459;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #header {
+    border: none;
+  }
+
+  /* LEFTIES */
+  #cairo,
+  #mount-moses,
+  #beaches,
+  #safari,
+  #cuisine,
+  #neo-cities {
+    width: 100%;
+    margin: 25.6em 0;
+    padding-top: 5.6em;
+    border-top: 4px solid #cf9459;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .application__title {
+    line-height: 1.4;
+  }
+
+  #form__tray {
+    max-width: 380px;
+    min-height: 722px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-align: start;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #form__success {
+    padding-top: 4em;
+  }
+
+  #functionality__bar {
+    margin: 0 auto;
+  }
+
+  .footer__content {
+    max-width: 100%;
+  }
+
+  .logo__wrapper--footer {
+    width: 50%;
+  }
+
+  .side__info {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .social__links, .footer__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer__link {
+    margin: 1.2em 0;
+  }
+}
+
+
+/* Small Smart Phones */
+@media(max-width: 400px) {
+  .hero__title {
+    font-size: 9rem;
+  }
+
+  .header__title {
+    font-size: 3.2rem;
+  }
+
+  .container {
+    max-width: 360px;
+  }
+
+  #first__form, #second__form, #form__success {
+    max-width: 360px;
+  }
+}
