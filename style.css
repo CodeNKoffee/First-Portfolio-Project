@@ -128,6 +128,11 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
 img {
   transform: translateY(50%);
   opacity: 0;
@@ -1047,5 +1052,9 @@ RESPONSIVENESS
 
   #first__form, #second__form, #form__success {
     max-width: 360px;
+  }
+  
+  .menu__link {
+    font-size: 24px;
   }
 }
