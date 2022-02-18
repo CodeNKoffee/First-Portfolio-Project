@@ -5,15 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyEgypt</title>
+
     <link rel="shortcut icon" type="x-icon" href="./Assets/Logo.svg">
+    <link rel="stylesheet" href="loader.css">
     <link rel="stylesheet" href="style.css" />
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      setTimeout(function() {
+        $(".bg__loader").fadeToggle();
+      }, 1500);
+    </script>
     <script defer src="app.js"></script>
     <script
       src="https://kit.fontawesome.com/c8e4d183c2.js"
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
+    <!-- Preloader -->
+    <div class="bg__loader">
+      <div class="center">
+        <div class="ring"></div>
+        <span class="travelling__icon">TRAVELLING...</span>
+      </div>
+    </div>
+
+    <!-- Website -->
     <section id="hero__section">
       <img class="hero__img" data-lazy="./Assets/heroImage2.png" alt="Hero Image" />
       <nav class="nav__bar">

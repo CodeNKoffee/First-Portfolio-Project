@@ -5,6 +5,9 @@
   padding: 0;
   font-family: 'Cairo', sans-serif;
   box-sizing: border-box;
+}
+
+.bg__loader {
   background: url(./Assets/sand\ dunes.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -54,7 +57,7 @@
   box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
 }
 
-span {
+.travelling__icon {
   background: transparent;
   position: absolute;
   border-radius: 50%;
