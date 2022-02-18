@@ -8,9 +8,11 @@
 }
 
 .bg__loader {
-  background: url(./Assets/sand\ dunes.jpg);
+  position: relative;
+  background: url(./Assets/sandunes.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: 100;
 }
 
 .center {
