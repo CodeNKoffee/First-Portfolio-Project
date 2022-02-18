@@ -338,7 +338,6 @@ main {
 
 .hero__img {
   position: absolute;
-  width: 100%;
 }
 
 .hero__title {
@@ -495,7 +494,6 @@ GUIDE SECTIONS' GENERICS
 #application {
   position: relative;
   background-image: url(./Assets/application.png);
-  background-size: cover;
 }
 
 .container {
@@ -825,6 +823,20 @@ footer {
 RESPONSIVENESS
 
 */
+/* Large Resoulution */
+@media(min-width: 1440px) {
+  .hero__img {
+    width: 100%;
+    max-height: 811px;
+  }
+
+  #application {
+    background-image: url(./Assets/application.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
 /* 3 : 2 Laptops & Small-Sized Computers */
 @media(max-width: 1100px) {
   .header__title {
