@@ -12,6 +12,10 @@ const loadingMessage = document.getElementById('loading-message');
 const firstForm = document.getElementById('first__form');
 const secondForm = document.getElementById('second__form');
 const formSuccess = document.getElementById('form__success');
+const formIcon = document.querySelectorAll('.form__icon');
+const formIconOne = document.getElementById('form__icon--one');
+const formIconTwo = document.getElementById('form__icon--two');
+const formIconThree = document.getElementById('form__icon--three');
 const functionalityBar = document.getElementById('functionality__bar');
 
 //FUNCTIONS
@@ -50,7 +54,7 @@ targets.forEach(lazyLoad);
 
 
 
-//Transitioning to Next Form
+// Transitioning to Next Form
 secondForm.style.display = "none";
 formSuccess.style.display = "none";
 submitButton.style.display = "none";
@@ -75,12 +79,35 @@ nextButton.addEventListener("click", () => {
 
     // add a swift animation
     secondForm.classList.add("swift-animation");
-  }, 1000); // wait for 1 second before showing the second form
+  }, 500); // wait for 1 second before showing the second form
 });
 
 submitButton.addEventListener("click", () => {
+  // hide the first form and next button
   secondForm.style.display = "none";
   functionalityBar.style.display = "none";
+
+  // show a loading message
+  loadingMessage.style.display = "block";
+
+  // delay the appearance of the second form and submit button
+  setTimeout(() => {
+    // hide the loading message
+    loadingMessage.style.display = "none";
+
+    // hide form icons
+    formIconOne.style.display = "none";
+    formIconTwo.style.display = "none";
+    formIconThree.style.display = "none";
+
+    // add icon swift animation
+    formIcon.classList.add("icon-swift-animation");
+
+    // show the success form
   formSuccess.style.display = "block";
+
+  // add a swift animation
+  formSuccess.classList.add("swift-animation");
+  }, 1000); // wait for 1 second before showing the second form
 });
 
