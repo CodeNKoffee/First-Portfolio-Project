@@ -571,7 +571,7 @@ GUIDE SECTIONS' GENERICS
   transition: all 300ms ease;
 }
 
-.loading-message {
+.loading__message {
   display: none;
   position: absolute;
   top: 50%;
@@ -580,7 +580,7 @@ GUIDE SECTIONS' GENERICS
   z-index: 9999;
 }
 
-.loading-message__spinner {
+.loading__message--spinner {
   background: transparent;
   position: absolute;
   width: 300px;
@@ -604,7 +604,7 @@ GUIDE SECTIONS' GENERICS
   }
 }
 
-.swift-animation {
+.swift__animation {
   animation-name: swift;
   animation-duration: 0.3s;
 }

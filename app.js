@@ -8,7 +8,7 @@ const nextButton = document.getElementById('next__btn');
 const submitButton = document.getElementById('submit__btn');
 const error = document.getElementById('error__msg');
 const formTray = document.getElementById('form__tray');
-const loadingMessage = document.getElementById('loading-message');
+const loadingMessage = document.getElementById('loading__message');
 const firstForm = document.getElementById('first__form');
 const secondForm = document.getElementById('second__form');
 const formSuccess = document.getElementById('form__success');
@@ -78,8 +78,8 @@ nextButton.addEventListener("click", () => {
     submitButton.style.display = "block";
 
     // add a swift animation
-    secondForm.classList.add("swift-animation");
-  }, 500); // wait for 1 second before showing the second form
+    secondForm.classList.add("swift__animation");
+  }, 600); // wait for 1 second before showing the second form
 });
 
 submitButton.addEventListener("click", () => {
@@ -99,7 +99,7 @@ submitButton.addEventListener("click", () => {
   formSuccess.style.display = "block";
 
   // add a swift animation
-  formSuccess.classList.add("swift-animation");
-  }, 1000); // wait for 1 second before showing the second form
+  formSuccess.classList.add("swift__animation");
+  }, 1200); // wait for 1 second before showing the second form
 });
 
