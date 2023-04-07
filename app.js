@@ -8,6 +8,7 @@ const nextButton = document.getElementById('next__btn');
 const submitButton = document.getElementById('submit__btn');
 const error = document.getElementById('error__msg');
 const formTray = document.getElementById('form__tray');
+const loadingMessage = document.getElementById('loading-message');
 const firstForm = document.getElementById('first__form');
 const secondForm = document.getElementById('second__form');
 const formSuccess = document.getElementById('form__success');
@@ -56,10 +57,25 @@ submitButton.style.display = "none";
 
 
 nextButton.addEventListener("click", () => {
+  // hide the first form and next button
   firstForm.style.display = "none";
   nextButton.style.display = "none";
-  secondForm.style.display = "block";
-  submitButton.style.display = "block";
+
+  // show a loading message
+  loadingMessage.style.display = "block";
+
+  // delay the appearance of the second form and submit button
+  setTimeout(() => {
+    // hide the loading message
+    loadingMessage.style.display = "none";
+
+    // show the second form and submit button
+    secondForm.style.display = "block";
+    submitButton.style.display = "block";
+
+    // add a swift animation
+    secondForm.classList.add("swift-animation");
+  }, 1000); // wait for 1 second before showing the second form
 });
 
 submitButton.addEventListener("click", () => {
