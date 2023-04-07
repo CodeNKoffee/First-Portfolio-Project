@@ -609,10 +609,6 @@ GUIDE SECTIONS' GENERICS
   animation-duration: 0.3s;
 }
 
-.icon-swift-animation {
-  animation: icon-swift 300ms;
-}
-
 @keyframes swift {
   from {
     opacity: 0;
@@ -621,17 +617,6 @@ GUIDE SECTIONS' GENERICS
   to {
     opacity: 1;
     transform: translateX(0);
-  }
-}
-
-@keyframes icon-swift {
-  from {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateX(50px);
   }
 }
 

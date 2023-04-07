@@ -95,14 +95,6 @@ submitButton.addEventListener("click", () => {
     // hide the loading message
     loadingMessage.style.display = "none";
 
-    // hide form icons
-    formIconOne.style.display = "none";
-    formIconTwo.style.display = "none";
-    formIconThree.style.display = "none";
-
-    // add icon swift animation
-    formIcon.classList.add("icon-swift-animation");
-
     // show the success form
   formSuccess.style.display = "block";
 
